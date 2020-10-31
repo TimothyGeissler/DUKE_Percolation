@@ -5,11 +5,12 @@ public class TestPercolation {
 	
 	public IPercolate getPercolator(int size) {
 		//return new PercolationDFS(size);
-		return new PercolationBFS(size);
+		//return new PercolationBFS(size);
 		//return new PercolationDFSFast(size);
-		//IUnionFind finder = new QuickUWPC();
-		//IPercolate perc = new PercolationUF(finder,size);
-		//return perc;
+
+		IUnionFind finder = new QuickUWPC();
+		IPercolate perc = new PercolationUF(finder,size);
+		return perc;
 	}
 	
 	/**

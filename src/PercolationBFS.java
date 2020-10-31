@@ -43,7 +43,7 @@ public class PercolationBFS extends PercolationDFSFast{
                     queue.add(new int[] {p[0] + 1, p[1]});
                 }
             } catch (IndexOutOfBoundsException ex) {
-                System.out.println("On edge");
+                //System.out.println("On edge");
             }
         }
 

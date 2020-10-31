@@ -25,7 +25,7 @@ public interface IPercolate {
 	 * 
 	 * The method modifies internal state so that determining if percolation
 	 * occurs could change after taking a step in the simulation.
-	 * 
+	 *
 	 * @param row
 	 *            row index in range [0,N-1]
 	 * @param col
