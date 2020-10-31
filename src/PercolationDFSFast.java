@@ -20,28 +20,28 @@ public class PercolationDFSFast extends PercolationDFS {
                 doDFS = true;
             }
         } catch (IndexOutOfBoundsException ex) {
-            System.out.println("On edge");
+            //System.out.println("On edge");
         }
         try {
             if (isFull(row, col - 1)) {
                 doDFS = true;
             }
         } catch (IndexOutOfBoundsException ex) {
-            System.out.println("On edge");
+            //System.out.println("On edge");
         }
         try {
             if (isFull(row - 1, col)) {
                 doDFS = true;
             }
         } catch (IndexOutOfBoundsException ex) {
-            System.out.println("On edge");
+            //System.out.println("On edge");
         }
         try {
             if (isFull(row + 1, col)) {
                 doDFS = true;
             }
         } catch (IndexOutOfBoundsException ex) {
-            System.out.println("On edge");
+            //System.out.println("On edge");
         }
         /*try {
             if (row == 0 || isFull(row, col + 1) || isFull(row, col - 1) || isFull(row - 1, col) || isFull(row + 1, col)) {

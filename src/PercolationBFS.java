@@ -19,23 +19,28 @@ public class PercolationBFS extends PercolationDFSFast{
 
         while (queue.size() != 0) {
             int [] p = queue.remove();
-
             try {
                 if (!isFull(p[0], p[1] + 1) && isOpen(p[0], p[1] + 1)) {
                     myGrid[p[0]][p[1] + 1] = FULL;
-                    queue.add(p);
+                    queue.add(new int[] {p[0], p[1] + 1});
                 }
+            } catch (IndexOutOfBoundsException ex) { }
+            try {
                 if (!isFull(p[0], p[1] - 1) && isOpen(p[0], p[1] - 1)) {
                     myGrid[p[0]][p[1] - 1] = FULL;
-                    queue.add(p);
+                    queue.add(new int[] {p[0], p[1] - 1});
                 }
+            } catch (IndexOutOfBoundsException ex) { }
+            try {
                 if (!isFull(p[0] - 1, p[1]) && isOpen(p[0] - 1, p[1])) {
                     myGrid[p[0] - 1][p[1]] = FULL;
-                    queue.add(p);
+                    queue.add(new int[] {p[0] - 1, p[1]});
                 }
+            } catch (IndexOutOfBoundsException ex) { }
+            try {
                 if (!isFull(p[0] + 1, p[1]) && isOpen(p[0] + 1, p[1])) {
                     myGrid[p[0] + 1][p[1]] = FULL;
-                    queue.add(p);
+                    queue.add(new int[] {p[0] + 1, p[1]});
                 }
             } catch (IndexOutOfBoundsException ex) {
                 System.out.println("On edge");
